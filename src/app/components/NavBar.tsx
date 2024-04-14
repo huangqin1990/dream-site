@@ -20,7 +20,7 @@ export default function NavBar() {
                         <PcLinks />
                     </div>
                     {/* 手机屏幕下展示公司名称 */}
-                    <div className="md:hidden">梦链科技</div>
+                    <div className="md:hidden text-slate-50">梦链科技</div>
 
                     {/* 菜单搜索展开按钮 */}
                     <div className="-mr-2 flex md:hidden">
