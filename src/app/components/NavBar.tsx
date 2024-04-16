@@ -1,10 +1,8 @@
 "use client"
 import './css/NavBar.css'
-import Image from 'next/image'
 import PcLinks from "@/app/components/PcLinks";
 import MobileLinks from "@/app/components/MobileLinks";
 import { useState } from 'react';
-import logo from '../../../public/image/logo-3.png'
 export default function NavBar() {
     const [isVisible, setIsVisible] = useState(false);
 
