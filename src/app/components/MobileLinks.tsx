@@ -18,9 +18,15 @@ import { useEffect, useRef, useState } from "react";
 //     </div>
 //     )
 // }
-export default function MobileLinks({ isVisible = false }) {
+
+export default function MobileLinks({ isVisible = false, onClose = () => {} }) {
     const [height, setHeight] = useState('0px');
     const contentSpaceRef = useRef(null as HTMLDivElement | null);
+    const handleLinkClick = () => {
+        // ... 这里是你的链接点击处理逻辑
+        onClose();
+
+    };
 
     useEffect(() => {
         if (!isVisible) {
@@ -31,11 +37,11 @@ export default function MobileLinks({ isVisible = false }) {
     }, [isVisible]);
 
     return (
-        <div className="md:hidden" id="mobile-menu" style={{ maxHeight: `${height}`, transition: 'max-height 0.5s ease', overflow: 'hidden' }}>
+        <div className="md:hidden" id="mobile-menu" style={{ maxHeight: `${height}`, transition: 'max-height 0.35s ease', overflow: 'hidden' }}>
             <div className="space-y-1 px-2 pb-3 pt-2 sm:px-3" ref={contentSpaceRef}>
                 {
                     LINKS.map(item =>
-                        <Link href={item.href} key={item.href} className="nav-mobile-route">{item.label}</Link>
+                        <Link href={item.href} key={item.href} className="nav-mobile-route" onClick={handleLinkClick}>{item.label}</Link>
                     )
                 }
             </div>

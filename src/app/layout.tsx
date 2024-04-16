@@ -21,7 +21,9 @@ export default function RootLayout({
       <body className={inter.className}>
       <div className="min-h-full min-w-[375px]">
         <NavBar />
-        {children}
+        <div className="max-w-7xl mx-auto sm:px-6 lg:px-8 pt-4 pb-4 px-4 flex-1 flex flex-row" style={{ 'minHeight': 'calc(100vh - 189px'  }}>
+            {children}
+        </div>
         <Footer />
       </div>
         </body>

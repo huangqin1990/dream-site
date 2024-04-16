@@ -11,6 +11,11 @@ export const LINKS: Array<NavLink> = [
         label: '首页'
     },
     {
+        href: '/business',
+        name: 'business',
+        label: '业务范围'
+    },
+    {
         href: '/solution',
         name: 'solution',
         label: '解决方案'
