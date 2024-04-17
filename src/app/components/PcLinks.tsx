@@ -1,10 +1,9 @@
 "use client"
 import Link from "next/link";
 import { LINKS } from "@/app/const";
-import { usePathname } from "next/navigation";
-// import './css/NavContainer.scss'
+import { usePathname } from 'next/navigation';
 
-export default function pcLinks() {
+export default function PcLinks() {
     const pathname = usePathname()
       return (
           <div className="hidden md:block">
