@@ -19,7 +19,7 @@ export default function NavBar() {
                 <div className="flex h-20 items-center justify-between">
                     <div className="flex items-center">
                         <div className="flex flex-shrink-0 items-center">
-                            <Image className="h-8 w-8" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="梦链科技" />
+                            <Image src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="梦链科技" width="8" height={8} />
                             <div className="hidden md:block text-gray-900 font-medium ml-4 md:text-lg">DreamChain</div>
                         </div>
                         <PcLinks />
