@@ -40,7 +40,7 @@ export default function Index() {
       <>
           {/*banner*/}
           <div className="w-full">
-              <div className="banner relative overflow-hidden">
+              <div className="banner relative overflow-hidden -z-10">
                   {/*<Image src={require('../../public/image/banner.png')} alt="梦链科技" className="w-full"></Image>*/}
                   <Banner></Banner>
                   <div className="absolute top-0 left-0 right-0 bottom-0">
@@ -61,6 +61,7 @@ export default function Index() {
                   w-full h-[400px] aspect-auto
                   md:w-[600px] md:h-[400px]
                   slideInFromLeft
+                  -z-10
                   ">
                   </div>
                   <div className="slideForIntroduce flex-1 text-center flex flex-col justify-center overflow-hidden flex-wrap mt-6 md:mt-0">
