@@ -44,13 +44,13 @@ const App = () => {
                         mode: "push",
                     },
                     onHover: {
-                        enable: true,
+                        enable: false,
                         mode: "repulse",
                     },
                 },
                 modes: {
                     push: {
-                        quantity: 4,
+                        quantity: 0,
                     },
                     repulse: {
                         distance: 200,
