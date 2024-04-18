@@ -14,7 +14,7 @@ export default function NavBar() {
         setIsVisible(false);
     };
     return (
-        <nav className="bg-white sticky top-0">
+        <nav className="bg-white sticky top-0 shadow-md hover:shadow-lg hover:transition-all duration-150">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="flex h-20 items-center justify-between">
                     <div className="flex items-center">
