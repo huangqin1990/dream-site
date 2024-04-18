@@ -7,22 +7,27 @@ import { useLayoutEffect } from "react";
 import intelligent from './lottie/intelligent.json';
 import Divider from "@/app/components/Divider";
 import Banner from "@/app/components/Banner";
-import gsap from 'gsap';
+import { gsap } from 'gsap';
+import { useGSAP } from "@gsap/react";
 
 export default function Index() {
+    // 政府企业数字化转型
+    const introduce: string = '政府企业数字化转型'
+    const splitIntroduce : string[] = introduce.split('')
+    const t = gsap.timeline({});
+    useGSAP(() => {
+        t.to(".dream-chain__char", {
+            opacity: 1,
+            delay: .1,
+            duration: .5,
+            y: 0,
+            ease: "Power4.inOut",
+            stagger: 0.1,
+        })
+        t.from(".dr-introduce__char", { x: 200, opacity: 0,stagger: .1 }).to(".dr-introduce__char", { stagger: .1 });
+    })
     useLayoutEffect(() => {
-
        const animate = setTimeout(() => {
-           const t = gsap.timeline({});
-           t.to(".dream-chain__char", {
-               opacity: 1,
-               delay: .1,
-               duration: .5,
-               y: 0,
-               ease: "Power4.inOut",
-               stagger: 0.1,
-           })
-
             lottie.loadAnimation({
                 container: document.getElementById('dream-chain__intelligent') as HTMLDivElement,
                 renderer: 'svg',
@@ -45,11 +50,20 @@ export default function Index() {
                   <div className="absolute top-0 left-0 right-0 bottom-0">
                   <div className="dream-chain page-container flex flex-col justify-between items-center md:flex-row">
                       <div className="w-[300px] h-[300px]" id="dream-chain__intelligent"></div>
+                      <div className="flex flex-col text-center">
                       <div className="relative text-gray-800 text-[60px]">
                           <div className="dream-chain__char">梦</div>
                           <div className="dream-chain__char">链</div>
                           <div className="dream-chain__char">科</div>
                           <div className="dream-chain__char">技</div>
+                      </div>
+                      <div className="dr-introduce flex justify-between">
+                          {
+                              splitIntroduce.map(char =>
+                                      <span key={char} className="dr-introduce__char block text-[20px]">{char}</span>
+                              )
+                          }
+                      </div>
                       </div>
                   </div>
                   </div>
@@ -71,14 +85,14 @@ export default function Index() {
               <Divider></Divider>
               <div></div>
               {/*业务范围示例*/}
-              <div className="flex md:flex-row flex-col-reverse">
-                  <div className="flex-1 ml-8 slideInFromLeft">
-                      <p>智慧方案</p>
-                  </div>
-                  <div className="relative slideInFromRight">
-                      <Image src={require('../../public/image/digital-1.png')} alt="信息化" width="600" className="rounded-2xl" priority></Image>
-                  </div>
-              </div>
+              {/*<div className="flex md:flex-row flex-col-reverse">*/}
+              {/*    <div className="flex-1 ml-8 slideInFromLeft">*/}
+              {/*        <p>智慧方案</p>*/}
+              {/*    </div>*/}
+              {/*    <div className="relative slideInFromRight">*/}
+              {/*        <Image src={require('../../public/image/digital-1.png')} alt="信息化" width="600" className="rounded-2xl" priority></Image>*/}
+              {/*    </div>*/}
+              {/*</div>*/}
               {/*解决方案示例*/}
               <div></div>
               </div>
