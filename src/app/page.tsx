@@ -12,7 +12,6 @@ import gsap from 'gsap';
 export default function Index() {
     useLayoutEffect(() => {
 
-
        const animate = setTimeout(() => {
            const t = gsap.timeline({});
            t.to(".dream-chain__char", {
@@ -26,7 +25,7 @@ export default function Index() {
 
             lottie.loadAnimation({
                 container: document.getElementById('dream-chain__intelligent') as HTMLDivElement,
-                renderer: 'canvas',
+                renderer: 'svg',
                 loop: true,
                 autoplay: true,
                 animationData: intelligent
@@ -40,7 +39,7 @@ export default function Index() {
       <>
           {/*banner*/}
           <div className="w-full">
-              <div className="banner relative overflow-hidden -z-10">
+              <div className="banner relative overflow-hidden -z-10 h-[500px]">
                   {/*<Image src={require('../../public/image/banner.png')} alt="梦链科技" className="w-full"></Image>*/}
                   <Banner></Banner>
                   <div className="absolute top-0 left-0 right-0 bottom-0">
