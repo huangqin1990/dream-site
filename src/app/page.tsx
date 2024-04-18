@@ -11,30 +11,30 @@ import gsap from 'gsap';
 
 export default function Index() {
     useLayoutEffect(() => {
-        const t = gsap.timeline({});
-        t.to(".dream-chain__char", {
-            opacity: 1,
-            delay: .1,
-            duration: .5,
-            y: 0,
-            ease: "Power4.inOut",
-            stagger: 0.1,
-        })
-        // lottie.loadAnimation({
-        //     container: document.getElementById('manager-data') as HTMLDivElement,
-        //     renderer: 'svg',
-        //     loop: true,
-        //     autoplay: true,
-        //     animationData: dataLottie
-        // })
-        lottie.loadAnimation({
-            container: document.getElementById('dream-chain__intelligent') as HTMLDivElement,
-            renderer: 'canvas',
-            loop: true,
-            autoplay: true,
-            animationData: intelligent
-        })
-        return () => {}
+
+
+       const animate = setTimeout(() => {
+           const t = gsap.timeline({});
+           t.to(".dream-chain__char", {
+               opacity: 1,
+               delay: .1,
+               duration: .5,
+               y: 0,
+               ease: "Power4.inOut",
+               stagger: 0.1,
+           })
+
+            lottie.loadAnimation({
+                container: document.getElementById('dream-chain__intelligent') as HTMLDivElement,
+                renderer: 'canvas',
+                loop: true,
+                autoplay: true,
+                animationData: intelligent
+            })
+        }, 17)
+        return () => {
+            clearTimeout(animate)
+        }
     }, [])
     return (
       <>
