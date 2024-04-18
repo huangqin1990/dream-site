@@ -46,6 +46,10 @@ body {
   background: transparent; /* make scrollbar transparent */
 }
 
+.page-container {
+  @apply max-w-7xl mx-auto sm:px-6 lg:px-8 pt-4 pb-4 px-4
+}
+
 
 
 

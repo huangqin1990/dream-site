@@ -39,8 +39,23 @@
 .slideForIntroduce {
   animation: slideInFromRight 0.5s ease-in-out;
 }
+.slideInFromRight {
+  animation: slideInFromRight 0.5s ease-in-out;
+}
 @media (min-width: 768px) {
     .slideForIntroduce {
         animation: slideInFromTop 0.5s ease-in-out;
     }
 }
+
+.dream-chain {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  .dream-chain__char {
+    display: inline-block;
+    margin-right: 6px;
+    opacity: 0.3;
+    transform: translateY(-150px);
+    transition: transform .3s ease-in-out;
+  }
+}
+
