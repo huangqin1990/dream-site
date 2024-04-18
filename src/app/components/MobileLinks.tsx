@@ -35,9 +35,9 @@ export default function MobileLinks({ isVisible = false, onClose = () => {} }) {
             setHeight(`${contentSpaceRef.current?.scrollHeight}px`);
         }
     }, [isVisible]);
-
+    // transition: 'max-height 0.35s ease',
     return (
-        <div className="md:hidden" id="mobile-menu" style={{ maxHeight: `${height}`, transition: 'max-height 0.35s ease', overflow: 'hidden' }}>
+        <div className="md:hidden" id="mobile-menu" style={{ maxHeight: `${height}`,  overflow: 'hidden' }}>
             <div className="space-y-1 px-2 pb-3 pt-2 sm:px-3" ref={contentSpaceRef}>
                 {
                     LINKS.map(item =>
