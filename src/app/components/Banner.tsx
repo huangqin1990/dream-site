@@ -44,7 +44,7 @@ const App = () => {
                         mode: "push",
                     },
                     onHover: {
-                        enable: false,
+                        enable: true,
                         mode: "repulse",
                     },
                 },
