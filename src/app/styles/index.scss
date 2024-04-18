@@ -58,4 +58,6 @@
     transition: transform .3s ease-in-out;
   }
 }
-
+.dr-business {
+  @apply h-[300px] shadow-xl rounded-xl hover:shadow-2xl transition-all cursor-pointer
+}

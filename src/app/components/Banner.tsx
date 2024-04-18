@@ -97,15 +97,15 @@ const App = () => {
     if (init) {
         return (
             <Particles
-                id="tsparticles"
+                id="banner-particles"
                 particlesLoaded={particlesLoaded}
                 options={options}
-                className="w-full h-[500px] bg-gradient-to-r from-indigo-500 to-green-300"
+                className="w-full h-[500px] bg-gradient-to-r from-indigo-500 to-green-300 shadow-xl"
             />
         );
     }
 
-    return <div className="w-full h-[500px] bg-gradient-to-r from-indigo-500 to-green-300"></div>;
+    return <div className="w-full h-[500px] bg-gradient-to-r from-indigo-500 to-green-300 shadow-xl"></div>;
 };
 
 export default App;
