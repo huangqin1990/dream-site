@@ -56,8 +56,14 @@
     opacity: 0;
     transform: translateY(-100px);
     transition: transform .3s ease-in-out;
+    text-shadow:
+            0 0 10px #0ebeff,
+            0 0 20px #0ebeff,
+            0 0 50px #0ebeff,
+            0 0 100px #0ebeff,
+            0 0 200px #0ebeff;
   }
 }
 .dr-business {
-  @apply h-[300px] shadow-xl rounded-xl hover:shadow-2xl transition-all cursor-pointer
+  @apply h-[300px] shadow-md rounded-xl hover:shadow-xl transition-all cursor-pointer
 }

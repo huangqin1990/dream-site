@@ -11,7 +11,7 @@ import { useGSAP } from "@gsap/react";
 
 export default function Index() {
     // 政府企业数字化转型
-    const introduce: string = '政府企业数字化转型'
+    const introduce: string = '专注政企数智化服务'
     const splitIntroduce : string[] = introduce.split('')
     // gsap.registerPlugin(ScrollTrigger);
     useGSAP(() => {
@@ -52,7 +52,7 @@ export default function Index() {
                   <div className="dream-chain page-container flex flex-col justify-between items-center md:flex-row md:mt-[50px]">
                       <div className="w-[300px] h-[300px]" id="dream-chain__intelligent"></div>
                       <div className="flex flex-col text-center">
-                      <div className="relative text-gray-800 md:text-[60px] text-[40px]">
+                      <div className="relative text-white md:text-[60px] text-[40px]">
                           <div className="dream-chain__char">梦</div>
                           <div className="dream-chain__char">链</div>
                           <div className="dream-chain__char">科</div>
@@ -94,7 +94,7 @@ export default function Index() {
                   <div className="dr-business flex items-center">
                       <div className="text-center p-6 text-sky-700">
                           <h1 className="text-[30px]">数字孪生</h1>
-                          <p className="leading-6">通过数据采集, 仿真模拟, 机器视觉, web 3D, GIS等技术手段, 解决实时监控,预测维护,优化效率,提升决策质量等场景，为客户提供高度准确和动态的解决方案, 可以应用于各种行业，如制造业、能源、医疗保健、交通运输等</p>
+                          <p className="leading-6">解决实时监控,预测维护,优化效率,提升决策质量等场景，为客户提供高度准确和动态的解决方案, 可以应用于各种行业，如制造业、能源、医疗保健、交通运输等</p>
                       </div>
                   </div>
                   <div className="dr-business flex items-center">

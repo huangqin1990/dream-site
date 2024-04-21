@@ -6,6 +6,7 @@ import {
     type ISourceOptions
 } from "@tsparticles/engine";
 import { loadSlim } from "@tsparticles/slim";
+import './css/Banner.scss';
 const App = () => {
     const [init, setInit] = useState(false);
 
@@ -100,7 +101,7 @@ const App = () => {
                 id="banner-particles"
                 particlesLoaded={particlesLoaded}
                 options={options}
-                className="w-full h-[500px] bg-gradient-to-r from-indigo-500 to-green-300 shadow-xl"
+                className="w-full h-[500px] shadow-xl"
             />
         );
     }
