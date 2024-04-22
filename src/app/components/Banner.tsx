@@ -97,16 +97,17 @@ const App = () => {
 
     if (init) {
         return (
+            <div className="relative">
             <Particles
                 id="banner-particles"
                 particlesLoaded={particlesLoaded}
                 options={options}
-                className="w-full h-[500px] shadow-xl"
+                className="w-full h-[500px] shadow-xl absolute top-0 left-0 right-0"
             />
+            </div>
         );
     }
-
-    return <div className="w-full h-[500px] bg-gradient-to-r from-indigo-500 to-green-300 shadow-xl"></div>;
+    return <div className="w-full h-[500px] shadow-xl particles-suspension"></div>;
 };
 
 export default App;

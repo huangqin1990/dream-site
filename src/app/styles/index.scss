@@ -65,5 +65,58 @@
   }
 }
 .dr-business {
-  @apply h-[300px] shadow-md rounded-xl hover:shadow-xl transition-all cursor-pointer
+  @apply h-[300px] shadow-md rounded-xl hover:shadow-xl transition-all cursor-pointer flex justify-between flex-col
+}
+
+
+@keyframes huerotate {
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.service-one {
+  background: url("../../../public/image/service-one.png") no-repeat center center;
+  background-size: cover;
+}
+.service-twin {
+  background: url("../../../public/image/twin.png") no-repeat center center;
+  background-size: cover;
+}
+.service-smart {
+  background: url("../../../public/image/smart.png") no-repeat center center;
+  background-size: cover;
+}
+
+.dr-service {
+  @apply text-left bg-gray-800  text-white indent-[2em] text-[14px] shadow-md rounded-b-xl hover:shadow-xl relative h-[110px] overflow-hidden;
+  .dr-service--title {
+    transition: all 0.5s;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .dr-service--intro {
+    transition: all 0.5s;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px;
+  }
+}
+.dr-service:hover {
+  .dr-service--title {
+    position: absolute;
+    top: 130px;
+  }
+  .dr-service--intro {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }

@@ -61,7 +61,7 @@ export default function Index() {
                       <div className="dr-introduce flex justify-between">
                           {
                               splitIntroduce.map(char =>
-                                      <span key={char} className="dr-introduce__char block text-[20px]">{char}</span>
+                                      <span key={char} className="dr-introduce__char block text-[24px] text-gray-800">{char}</span>
                               )
                           }
                       </div>
@@ -71,39 +71,41 @@ export default function Index() {
               </div>
               <div className="page-container mt-6">
               <div className="flex md:flex-row flex-col w-full">
-                  {/*<div id="manager-data" className="*/}
-                  {/*w-full h-[400px] aspect-auto*/}
-                  {/*md:w-[600px] md:h-[400px]*/}
-                  {/*slideInFromLeft*/}
-                  {/*-z-10*/}
-                  {/*">*/}
-                  {/*</div>*/}
                   <div className="slideForIntroduce flex-1 text-center flex flex-col justify-center overflow-hidden flex-wrap mt-6 md:mt-0">
-                      <h1 className="text-center mb-8 md:text-[40px] text-[30px]">数字化信息服务提供</h1>
+                      <h1 className="text-center mb-8 md:text-[40px] text-[30px]">数智化信息服务</h1>
                       <p className="text-lg text-gray-600">政府，企业一站式数字化解决方案提供</p>
                   </div>
               </div>
               <Divider></Divider>
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4">
-                  <div className="dr-business flex items-center">
-                      <div className="text-center p-6 text-sky-700">
-                          <h1 className="text-[30px]">政企服务</h1>
-                          <p>致力于为政府政务工作，企业管理提供标准化+定制化的企业管理系统,通过丰富的行业经验及一流的技术服务帮助政府及企业实现数字化战略</p>
+                  <div className="dr-business">
+                          <div className="service-one flex-1 w-full shadow-md rounded-t-xl"></div>
+                          <div className="dr-service">
+                              <h1 className="text-[30px] dr-service--title">政企服务</h1>
+                              <p className="dr-service--intro">为政府，企业管理提供标准化+定制化的信息化管理系统,通过一流的技术服务帮助政府及企业实现数字化战略</p>
+                          </div>
+                  </div>
+                  <div className="dr-business">
+                      {/*<div className="text-center p-6 text-sky-700">*/}
+                      {/*    <h1 className="text-[30px]">数字孪生</h1>*/}
+                      {/*    <p className="leading-6">解决实时监控,预测维护,优化效率,提升决策质量等场景，为客户提供高度准确和动态的解决方案, 可以应用于各种行业，如制造业、能源、医疗保健、交通运输等</p>*/}
+                      {/*</div>*/}
+                      <div className="service-twin flex-1 w-full shadow-md rounded-t-xl"></div>
+
+                      <div className="dr-service">
+                          <h1 className="text-[30px] dr-service--title">数字孪生</h1>
+                          <p className="dr-service--intro">通过3D,大数据,AloT,Ai等技术相结合。在预测维护,优化效率,提升决策质量等场景,为客户提供高度准确和动态的解决方案。</p>
+                      </div>
+
+                  </div>
+                  <div className="dr-business">
+                      <div className="service-smart flex-1 w-full shadow-md rounded-t-xl"></div>
+                      <div className="dr-service">
+                          <h1 className="text-[30px] dr-service--title">智慧方案</h1>
+                          <p className="dr-service--intro">面向智慧教育,智慧工业, 智慧城市等场景,提供资产管理,数据监控,数据整合,报告产出等的软硬件一体化产品技术解决方案</p>
                       </div>
                   </div>
-                  <div className="dr-business flex items-center">
-                      <div className="text-center p-6 text-sky-700">
-                          <h1 className="text-[30px]">数字孪生</h1>
-                          <p className="leading-6">解决实时监控,预测维护,优化效率,提升决策质量等场景，为客户提供高度准确和动态的解决方案, 可以应用于各种行业，如制造业、能源、医疗保健、交通运输等</p>
-                      </div>
-                  </div>
-                  <div className="dr-business flex items-center">
-                      <div className="text-center p-6 text-sky-700">
-                          <h1 className="text-[30px]">智慧方案</h1>
-                          <p className="">通过云计算，AloT, 大数据，边缘计算等技术手段, 面向智慧教育,智慧工业, 智慧城市等场景,提供资产管理,数据监控,数据整合,报告产出等的软硬件一体化产品技术解决方案</p>
-                      </div>
-                  </div>
-                  <div className="dr-business flex items-center">
+                  <div className="dr-business">
                       <div className="text-center p-6 text-sky-700">
                           <h1 className="text-[30px]">互联网+</h1>
                           <p>通过</p>
@@ -127,7 +129,6 @@ export default function Index() {
               <div></div>
               </div>
           </div>
-
       </>
 
     )
